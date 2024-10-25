@@ -10,9 +10,9 @@ def read_repo():
 
 
 def get_commits(repo, branch):
-    print(branch.log())
+    # print(branch.log())
     print(branch.name)
-    commits = list(repo.iter_commits(branch.name,max_count=1))
+    commits = list(repo.iter_commits(branch.name, max_count=2))
     print(commits)
     for line in commits:
         print(line.committed_datetime)
